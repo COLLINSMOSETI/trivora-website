@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trivora Technologies | Website Development, Systems Integration & Apps</title>
+  <meta name="description" content="Trivora Technologies designs and builds websites, integrates business systems and develops web and mobile apps. Website development from KSh 30,000.">
+  <meta name="theme-color" content="#030a1c">
+  <meta property="og:title" content="Trivora Technologies">
+  <meta property="og:description" content="Websites, system integrations and apps. Website development from KSh 30,000.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%232563eb'/%3E%3Cpath d='M11 12h18M20 12v17' stroke='white' stroke-width='3.6' stroke-linecap='round' fill='none'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/site.css">
+  <noscript><style>.reveal{opacity:1;transform:none}.term-body .l{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+  <!-- Animated blue background -->
+  <div class="bg" aria-hidden="true">
+    <div class="bg-gradient"></div>
+    <div class="bg-grid"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <canvas id="net"></canvas>
+    <div class="bg-vignette"></div>
+  </div>
+
+  <header class="nav" id="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top" aria-label="Trivora home">
+        <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="lg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#38bdf8"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs><rect width="40" height="40" rx="10" fill="url(#lg1)"/><path d="M11 12h18M20 12v17" stroke="#fff" stroke-width="3.6" stroke-linecap="round" fill="none"/><circle cx="29" cy="29" r="2.6" fill="#fff"/></svg>
+        <span class="brand-text">Trivora<small>Technologies</small></span>
+      </a>
+      <nav class="nav-links" id="navLinks" aria-label="Main">
+        <a href="#services">Services</a>
+        <a href="#process">How we work</a>
+        <a href="#integrations">Integrations</a>
+        <a href="#apps">Apps</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact" class="btn btn-sm btn-primary nav-cta">Get a quote</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow"><i class="pulse"></i> Websites &bull; Systems &bull; Apps</span>
+          <h1>We build websites, connect your systems and ship <span class="grad">apps that grow your business.</span></h1>
+          <p class="lead">Trivora Technologies is a technology company that designs fast, modern websites, integrates the tools your business already uses, and develops custom web and mobile apps &mdash; from first idea to launch and beyond.</p>
+          <div class="hero-cta">
+            <a href="#contact" class="btn btn-primary">Start your project</a>
+            <a href="#pricing" class="btn btn-ghost">Websites from KSh 30,000</a>
+          </div>
+          <ul class="hero-points">
+            <li>Mobile-first design</li>
+            <li>M-Pesa &amp; API ready</li>
+            <li>Secure by default</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual">
+          <div class="terminal glass" role="img" aria-label="Animated example of the Trivora build process">
+            <div class="term-bar"><span></span><span></span><span></span><em>trivora &mdash; build</em></div>
+            <pre class="term-body"><span class="l l1"><b>$</b> trivora new website --mobile-first</span>
+<span class="l l2"><i>&#10004;</i> Discovery &amp; goals mapped</span>
+<span class="l l3"><i>&#10004;</i> Interface designed &amp; approved</span>
+<span class="l l4"><i>&#10004;</i> Frontend built &amp; optimised</span>
+<span class="l l5"><i>&#10004;</i> Backend + database connected</span>
+<span class="l l6"><i>&#10004;</i> Payments &amp; APIs integrated</span>
+<span class="l l7"><i>&#10004;</i> Tested, secured &amp; live</span>
+<span class="l l8"><b>$</b> <u class="cursor"></u></span></pre>
+          </div>
+          <div class="float-card fc-1 glass"><strong>From KSh 30,000</strong><span>Website development</span></div>
+          <div class="float-card fc-2 glass"><strong>Web &bull; Mobile</strong><span>Apps &amp; dashboards</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECH MARQUEE -->
+    <section class="marquee" aria-label="Technologies we work with">
+      <div class="marquee-track">
+        <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Python</span><span>Flask</span><span>Node.js</span><span>React</span><span>REST APIs</span><span>SQL Databases</span><span>M-Pesa Daraja</span><span>Docker</span><span>Git</span><span>Linux</span>
+        <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Python</span><span>Flask</span><span>Node.js</span><span>React</span><span>REST APIs</span><span>SQL Databases</span><span>M-Pesa Daraja</span><span>Docker</span><span>Git</span><span>Linux</span>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section" id="services">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <span class="kicker">What we do</span>
+          <h2>Everything your business needs to work online</h2>
+          <p>One team for your website, your back-office systems and your apps &mdash; so everything fits together instead of living in separate pieces.</p>
+        </header>
+        <div class="cards">
+          <article class="card glass reveal">
+            <div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></div>
+            <h3>Website development</h3>
+            <p>Modern, fast, mobile-friendly websites that present your business professionally and turn visitors into customers. Business sites, portfolios, landing pages and more.</p>
+            <span class="tag">From KSh 30,000</span>
+          </article>
+          <article class="card glass reveal">
+            <div class="icon"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8 7l3 9M16 7l-3 9M8.5 6h7"/></svg></div>
+            <h3>Systems integration</h3>
+            <p>We connect the tools you already use &mdash; payments, accounting, CRM, inventory, SMS and email &mdash; so data flows automatically and nobody types the same thing twice.</p>
+            <span class="tag">APIs &bull; Payments &bull; Automation</span>
+          </article>
+          <article class="card glass reveal">
+            <div class="icon"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/></svg></div>
+            <h3>Mobile &amp; web apps</h3>
+            <p>Custom apps built around how your business actually works &mdash; customer apps, staff tools, booking platforms and internal dashboards on phone, tablet and desktop.</p>
+            <span class="tag">Android &bull; iOS &bull; Web apps</span>
+          </article>
+          <article class="card glass reveal">
+            <div class="icon"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5.5" rx="8" ry="3"/><path d="M4 5.5v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6M4 11.5v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg></div>
+            <h3>Backends &amp; databases</h3>
+            <p>Secure server-side systems with a proper database and an admin dashboard, so you can see your customers, enquiries, orders and activity in one place.</p>
+            <span class="tag">Admin dashboards &bull; Data</span>
+          </article>
+          <article class="card glass reveal">
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 4h2l2.4 11h10.2L20 7H6.2"/><circle cx="9" cy="19" r="1.5"/><circle cx="17" cy="19" r="1.5"/></svg></div>
+            <h3>E-commerce &amp; booking</h3>
+            <p>Online shops, appointment booking and ordering systems with mobile payments, so customers can buy or book from anywhere, any time.</p>
+            <span class="tag">Shops &bull; Bookings &bull; Payments</span>
+          </article>
+          <article class="card glass reveal">
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
+            <h3>Maintenance &amp; support</h3>
+            <p>We keep your website and systems secure, updated and running smoothly, and we are a phone call or message away when you need a change or help.</p>
+            <span class="tag">Updates &bull; Security &bull; Support</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section" id="process">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <span class="kicker">How we create websites</span>
+          <h2>A clear process from idea to launch</h2>
+          <p>You always know what is happening and what comes next. Here is how every Trivora project moves from a conversation to a live website.</p>
+        </header>
+        <ol class="steps">
+          <li class="step glass reveal">
+            <span class="step-n">01</span>
+            <h3>Discover</h3>
+            <p>We listen first. We learn about your business, your customers and your goals, then agree on the pages, features and budget before any work begins.</p>
+          </li>
+          <li class="step glass reveal">
+            <span class="step-n">02</span>
+            <h3>Design</h3>
+            <p>We design the look and feel of your site &mdash; layout, colours, typography and user journey &mdash; and show it to you for feedback and approval.</p>
+          </li>
+          <li class="step glass reveal">
+            <span class="step-n">03</span>
+            <h3>Build</h3>
+            <p>Our developers turn the approved design into clean, fast code that works on every screen size, with search-engine-friendly structure built in.</p>
+          </li>
+          <li class="step glass reveal">
+            <span class="step-n">04</span>
+            <h3>Integrate</h3>
+            <p>We connect the backend, database, contact forms, payments (such as M-Pesa), email and any other systems your business depends on.</p>
+          </li>
+          <li class="step glass reveal">
+            <span class="step-n">05</span>
+            <h3>Test &amp; launch</h3>
+            <p>We test on phones, tablets and desktops, check speed and security, set up your domain and hosting, and take your site live.</p>
+          </li>
+          <li class="step glass reveal">
+            <span class="step-n">06</span>
+            <h3>Support &amp; grow</h3>
+            <p>After launch we stay with you &mdash; fixing issues, making updates and adding new features as your business grows.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- INTEGRATIONS -->
+    <section class="section" id="integrations">
+      <div class="wrap split">
+        <div class="split-copy reveal">
+          <span class="kicker">Systems integration</span>
+          <h2>Make your tools work as one system</h2>
+          <p>Most businesses run on a mix of disconnected tools. We link them together so information moves automatically, errors drop and your team saves hours every week.</p>
+          <ul class="checks">
+            <li><b>Payments</b> &mdash; M-Pesa (Daraja), cards and online checkout connected to your site or app.</li>
+            <li><b>Customer data</b> &mdash; website forms feeding straight into your CRM, database or spreadsheet.</li>
+            <li><b>Operations</b> &mdash; inventory, point-of-sale, accounting and order systems that stay in sync.</li>
+            <li><b>Messaging</b> &mdash; automatic SMS, email and WhatsApp notifications for customers and staff.</li>
+            <li><b>Custom APIs</b> &mdash; we build and connect APIs so any two systems can talk to each other.</li>
+            <li><b>Data migration</b> &mdash; safely moving your records from old systems to new ones.</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary">Talk to us about integration</a>
+        </div>
+        <div class="split-visual reveal">
+          <svg class="hub" viewBox="0 0 520 420" role="img" aria-label="Diagram of systems connected to Trivora">
+            <defs>
+              <radialGradient id="hubGlow"><stop offset="0" stop-color="#38bdf8" stop-opacity=".55"/><stop offset="1" stop-color="#38bdf8" stop-opacity="0"/></radialGradient>
+            </defs>
+            <circle cx="260" cy="210" r="120" fill="url(#hubGlow)"/>
+            <g class="hub-lines">
+              <line x1="260" y1="210" x2="260" y2="68"/>
+              <line x1="260" y1="210" x2="430" y2="120"/>
+              <line x1="260" y1="210" x2="430" y2="300"/>
+              <line x1="260" y1="210" x2="260" y2="352"/>
+              <line x1="260" y1="210" x2="90" y2="300"/>
+              <line x1="260" y1="210" x2="90" y2="120"/>
+            </g>
+            <g class="hub-node"><rect x="198" y="50" width="124" height="36" rx="10"/><text x="260" y="73">Payments</text></g>
+            <g class="hub-node"><rect x="368" y="102" width="124" height="36" rx="10"/><text x="430" y="125">CRM</text></g>
+            <g class="hub-node"><rect x="368" y="282" width="124" height="36" rx="10"/><text x="430" y="305">Inventory</text></g>
+            <g class="hub-node"><rect x="198" y="334" width="124" height="36" rx="10"/><text x="260" y="357">Accounting</text></g>
+            <g class="hub-node"><rect x="28" y="282" width="124" height="36" rx="10"/><text x="90" y="305">SMS &amp; Email</text></g>
+            <g class="hub-node"><rect x="28" y="102" width="124" height="36" rx="10"/><text x="90" y="125">Website / App</text></g>
+            <g class="hub-core">
+              <circle cx="260" cy="210" r="44"/>
+              <text x="260" y="206">TRIVORA</text>
+              <text x="260" y="224" class="sub">integration</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPS -->
+    <section class="section" id="apps">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <span class="kicker">Apps</span>
+          <h2>Custom apps built around your business</h2>
+          <p>Whether your customers need an app in their pocket or your team needs a tool to run daily operations, we design and build it end to end.</p>
+        </header>
+        <div class="cards cards-4">
+          <article class="card glass reveal">
+            <h3>Mobile apps</h3>
+            <p>Android and iOS apps for customers or staff, with push notifications, accounts and secure data sync.</p>
+          </article>
+          <article class="card glass reveal">
+            <h3>Web apps &amp; PWAs</h3>
+            <p>Browser-based apps that work on any device and can be installed like a native app, with no app-store wait.</p>
+          </article>
+          <article class="card glass reveal">
+            <h3>Business dashboards</h3>
+            <p>Live dashboards that turn your data into clear charts, reports and alerts so you can decide faster.</p>
+          </article>
+          <article class="card glass reveal">
+            <h3>Management systems</h3>
+            <p>School, clinic, shop, fleet, rental or booking systems &mdash; designed around your workflow, not a generic template.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="section" id="pricing">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <span class="kicker">Pricing</span>
+          <h2>Website development from as low as KSh 30,000</h2>
+          <p>Honest, upfront pricing. Start small with a professional website and add systems and apps as you grow.</p>
+        </header>
+        <div class="plans">
+          <article class="plan glass reveal">
+            <h3>Starter Website</h3>
+            <div class="price"><small>From</small> KSh 30,000</div>
+            <p class="plan-sub">A professional online presence for your business.</p>
+            <ul>
+              <li>Modern multi-section website</li>
+              <li>Mobile-friendly, responsive design</li>
+              <li>Contact form, call &amp; WhatsApp buttons</li>
+              <li>Basic search-engine (SEO) setup</li>
+              <li>Fast, secure build</li>
+              <li>Launch support</li>
+            </ul>
+            <a href="#contact" class="btn btn-ghost btn-block" data-service="website">Get started</a>
+          </article>
+          <article class="plan plan-featured glass reveal">
+            <span class="badge">Most popular</span>
+            <h3>Business Website + Backend</h3>
+            <div class="price"><small>Custom</small> Get a quote</div>
+            <p class="plan-sub">A website that manages your customers and data.</p>
+            <ul>
+              <li>Everything in Starter</li>
+              <li>Custom backend &amp; database</li>
+              <li>Admin dashboard to view enquiries &amp; activity</li>
+              <li>Email notifications</li>
+              <li>Online booking or e-commerce</li>
+              <li>M-Pesa &amp; payment integration</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary btn-block" data-service="ecommerce">Request a quote</a>
+          </article>
+          <article class="plan glass reveal">
+            <h3>Systems &amp; Apps</h3>
+            <div class="price"><small>Custom</small> Get a quote</div>
+            <p class="plan-sub">Software built and connected around your operations.</p>
+            <ul>
+              <li>Custom web or mobile app</li>
+              <li>Integration with your existing systems</li>
+              <li>API development</li>
+              <li>Data migration</li>
+              <li>Ongoing maintenance &amp; support</li>
+            </ul>
+            <a href="#contact" class="btn btn-ghost btn-block" data-service="integration">Talk to us</a>
+          </article>
+        </div>
+        <p class="fineprint reveal">The starting price applies to website development. The final cost depends on the number of pages, features and integrations &mdash; message us and we will give you a clear quote.</p>
+      </div>
+    </section>
+
+    <!-- WHY -->
+    <section class="section">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <span class="kicker">Why Trivora</span>
+          <h2>Technology that is built to last</h2>
+        </header>
+        <div class="cards cards-4">
+          <article class="card glass reveal"><h3>Built for mobile</h3><p>Most of your customers browse on their phones, so every project is designed mobile-first.</p></article>
+          <article class="card glass reveal"><h3>One team, end to end</h3><p>Design, development, integration and support under one roof &mdash; no passing you between vendors.</p></article>
+          <article class="card glass reveal"><h3>Secure &amp; reliable</h3><p>Safe forms, protected admin areas and sensible defaults to keep your data and your customers' data safe.</p></article>
+          <article class="card glass reveal"><h3>Clear communication</h3><p>Plain language, agreed scope and regular updates. You always know where your project stands.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="wrap narrow">
+        <header class="section-head reveal">
+          <span class="kicker">FAQ</span>
+          <h2>Questions we often hear</h2>
+        </header>
+        <div class="faq reveal">
+          <details><summary>What do I need to get started?</summary><p>Just an idea of what your business does and what you want the website to achieve. If you have a logo, photos or content, great &mdash; if not, we will guide you on what is needed.</p></details>
+          <details><summary>How much does a website cost?</summary><p>Website development starts from KSh 30,000. The final price depends on the number of pages, features and integrations. Tell us what you need and we will give you a clear quote.</p></details>
+          <details><summary>Can you connect my website to M-Pesa?</summary><p>Yes. We integrate mobile payments and other systems so customers can pay online and your records update automatically.</p></details>
+          <details><summary>Can you work with the systems I already use?</summary><p>In most cases, yes. We connect existing tools through their APIs or build a bridge between them. Contact us with the systems you use and we will confirm what is possible.</p></details>
+          <details><summary>Do you help with hosting and domain names?</summary><p>Yes. We can help you choose and set up a domain and hosting, and keep everything running after launch.</p></details>
+          <details><summary>Will I be able to see who contacts my business?</summary><p>Yes. Our websites can include a backend with a database and an admin dashboard so you can see every enquiry and manage it in one place.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="wrap contact-grid">
+        <div class="contact-info reveal">
+          <span class="kicker">Contact us</span>
+          <h2>Let's build something great together</h2>
+          <p>Tell us about your project. Fill in the form, or reach us directly by phone, WhatsApp or email.</p>
+
+          <div class="contact-list">
+            <a class="contact-item glass" href="mailto:trivoratechnologies1@gmail.com">
+              <span class="ci-icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+              <span><small>Email</small><strong>trivoratechnologies1@gmail.com</strong></span>
+            </a>
+            
+            <a class="contact-item glass" href="tel:+254703502267">
+              <span class="ci-icon"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg></span>
+              <span><small>Call</small><strong>0703502267</strong></span>
+            </a>
+            
+            <a class="contact-item glass" href="tel:+254116918656">
+              <span class="ci-icon"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg></span>
+              <span><small>Call</small><strong>+254 116 918656</strong></span>
+            </a>
+            
+            <a class="contact-item glass" href="tel:+254112061280">
+              <span class="ci-icon"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg></span>
+              <span><small>Call</small><strong>+254 112 061280</strong></span>
+            </a>
+            
+            <a class="contact-item glass" href="https://wa.me/254703502267" target="_blank" rel="noopener">
+              <span class="ci-icon"><svg viewBox="0 0 24 24"><path d="M4 20l1.2-4A8 8 0 1112 20a8 8 0 01-3.8-1z"/></svg></span>
+              <span><small>WhatsApp</small><strong>Chat with us now</strong></span>
+            </a>
+          </div>
+        </div>
+
+        <form class="form glass reveal" id="contactForm" novalidate>
+          <h3>Request a free consultation</h3>
+          <div class="field-row">
+            <label>Full name<input type="text" name="name" autocomplete="name" required maxlength="100" placeholder="Jane Wanjiku"></label>
+            <label>Email<input type="email" name="email" autocomplete="email" required maxlength="160" placeholder="you@example.com"></label>
+          </div>
+          <div class="field-row">
+            <label>Phone (optional)<input type="tel" name="phone" autocomplete="tel" maxlength="20" placeholder="07XX XXX XXX"></label>
+            <label>Service
+              <select name="service" required>
+                <option value="website">Website development</option>
+                <option value="integration">Systems integration</option>
+                <option value="app">Mobile / web app</option>
+                <option value="ecommerce">E-commerce / booking system</option>
+                <option value="maintenance">Maintenance &amp; support</option>
+                <option value="other">Something else</option>
+              </select>
+            </label>
+          </div>
+          <label>Budget (optional)
+            <select name="budget">
+              <option value="">Not sure yet</option>
+              <option>KSh 30,000 - 60,000</option>
+              <option>KSh 60,000 - 150,000</option>
+              <option>KSh 150,000+</option>
+            </select>
+          </label>
+          <label>Tell us about your project
+            <textarea name="message" rows="5" required maxlength="3000" placeholder="What does your business do, and what would you like us to build?"></textarea>
+          </label>
+          <div class="hp" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+          <button class="btn btn-primary btn-block" type="submit" id="formBtn">Send request</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          <p class="fineprint">We only use your details to respond to your request.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div>
+        <a class="brand" href="#top" aria-label="Trivora home">
+          <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="lg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#38bdf8"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs><rect width="40" height="40" rx="10" fill="url(#lg2)"/><path d="M11 12h18M20 12v17" stroke="#fff" stroke-width="3.6" stroke-linecap="round" fill="none"/><circle cx="29" cy="29" r="2.6" fill="#fff"/></svg>
+          <span class="brand-text">Trivora<small>Technologies</small></span>
+        </a>
+        <p class="footer-note">Websites, systems integration and apps.<br>Website development from KSh 30,000.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="#services">Services</a>
+        <a href="#process">How we work</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Get in touch</h4>
+        <a href="mailto:trivoratechnologies1@gmail.com">trivoratechnologies1@gmail.com</a>
+        <a href="tel:+254703502267">0703502267</a><a href="tel:+254116918656">+254 116 918656</a><a href="tel:+254112061280">+254 112 061280</a>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">&copy; <span id="year">2026</span> Trivora Technologies. All rights reserved.</div>
+  </footer>
+
+  <script type="module" src="js/site/main.js"></script>
+</body>
+</html>

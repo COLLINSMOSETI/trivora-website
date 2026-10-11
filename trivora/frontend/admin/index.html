@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Dashboard | Trivora Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body class="pending">
+  <div class="bg" aria-hidden="true"><div class="bg-gradient"></div><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="login-brand">
+        <svg viewBox="0 0 40 40" width="36" height="36" aria-hidden="true"><defs><linearGradient id="lga" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#38bdf8"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs><rect width="40" height="40" rx="10" fill="url(#lga)"/><path d="M11 12h18M20 12v17" stroke="#fff" stroke-width="3.6" stroke-linecap="round" fill="none"/><circle cx="29" cy="29" r="2.6" fill="#fff"/></svg>
+        <div><strong>Trivora</strong><span>Admin dashboard</span></div>
+      </div>
+      <div class="topbar-actions">
+        <a class="link" href="../index.html" target="_blank" rel="noopener">View website</a>
+        <span class="who" id="adminName"></span>
+        <button class="btn btn-ghost btn-sm" type="button" id="logoutBtn">Sign out</button>
+      </div>
+    </div>
+    <nav class="tabs" role="tablist">
+      <button class="tab active" data-tab="overview" role="tab">Overview</button>
+      <button class="tab" data-tab="enquiries" role="tab">Enquiries <span class="count" id="newCount" hidden>0</span></button>
+      <button class="tab" data-tab="visitors" role="tab">Visitors</button>
+      <button class="tab" data-tab="settings" role="tab">Settings</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <!-- OVERVIEW -->
+    <section class="panel active" id="tab-overview">
+      <div class="stats">
+        <div class="stat"><span>Total enquiries</span><strong id="sEnqTotal">-</strong></div>
+        <div class="stat accent"><span>New (unanswered)</span><strong id="sEnqNew">-</strong></div>
+        <div class="stat"><span>Enquiries today</span><strong id="sEnqToday">-</strong></div>
+        <div class="stat"><span>Visits today</span><strong id="sVisToday">-</strong></div>
+        <div class="stat"><span>Total visits</span><strong id="sVisTotal">-</strong></div>
+        <div class="stat"><span>Unique visitors</span><strong id="sVisUnique">-</strong></div>
+      </div>
+
+      <div class="grid-2">
+        <div class="box">
+          <div class="box-head"><h2>Last 14 days</h2>
+            <div class="legend"><span class="dot d-visits"></span>Visits <span class="dot d-enq"></span>Enquiries</div>
+          </div>
+          <div class="chart" id="chart"></div>
+        </div>
+        <div class="box">
+          <h2>Breakdown</h2>
+          <h3 class="sub">Enquiries by service</h3>
+          <div class="bars" id="byService"></div>
+          <h3 class="sub">Visitors by device</h3>
+          <div class="bars" id="byDevice"></div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="box-head"><h2>Latest enquiries</h2><button class="link-btn" type="button" data-goto="enquiries">View all &rarr;</button></div>
+        <div id="recent"></div>
+      </div>
+    </section>
+
+    <!-- ENQUIRIES -->
+    <section class="panel" id="tab-enquiries">
+      <div class="toolbar">
+        <input type="search" id="enqSearch" placeholder="Search name, email, phone or message...">
+        <select id="enqStatus"></select>
+        <button class="btn btn-ghost btn-sm" type="button" id="exportEnquiries">Export CSV</button>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>#</th><th>Received</th><th>Name</th><th>Contact</th><th>Service</th><th>Status</th><th></th></tr></thead>
+          <tbody id="enqBody"><tr><td colspan="7" class="empty">Loading...</td></tr></tbody>
+        </table>
+      </div>
+      <p class="muted small" id="enqCount"></p>
+    </section>
+
+    <!-- VISITORS -->
+    <section class="panel" id="tab-visitors">
+      <div class="toolbar">
+        <label class="check"><input type="checkbox" id="showBots"> Show bots / crawlers</label>
+        <button class="btn btn-ghost btn-sm" type="button" id="exportVisitors">Export CSV</button>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Time</th><th>IP address</th><th>Device</th><th>Browser</th><th>OS</th><th>Came from</th></tr></thead>
+          <tbody id="visBody"><tr><td colspan="6" class="empty">Loading...</td></tr></tbody>
+        </table>
+      </div>
+      <div class="more"><span class="muted small" id="visCount"></span><button class="btn btn-ghost btn-sm" type="button" id="visMore" hidden>Load more</button></div>
+    </section>
+
+    <!-- SETTINGS -->
+    <section class="panel" id="tab-settings">
+      <div class="grid-2">
+        <div class="box">
+          <h2>Change password</h2>
+          <form id="pwForm" class="stack">
+            <label>Current password<input type="password" name="current" autocomplete="current-password" required></label>
+            <label>New password (min. 10 characters)<input type="password" name="new" autocomplete="new-password" minlength="10" required></label>
+            <button class="btn btn-primary" type="submit">Update password</button>
+          </form>
+        </div>
+        <div class="box">
+          <h2>Company details (backend)</h2>
+          <dl class="details" id="companyDetails"></dl>
+          <p class="muted small">Used for emails. To change them edit <code>backend/server/config.py</code>, and the public site's copy in <code>frontend/index.html</code>.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Enquiry detail modal -->
+  <div class="modal" id="modal" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+      <button class="modal-x" id="mClose" type="button" aria-label="Close">&times;</button>
+      <h2 id="mTitle">Enquiry</h2>
+      <dl class="details" id="mDetails"></dl>
+      <div class="msg-box" id="mMessage"></div>
+      <label>Status <select id="mStatus"></select></label>
+      <label>Private notes
+        <textarea id="mNotes" rows="3" maxlength="2000" placeholder="Follow-up notes, quote sent, etc."></textarea>
+      </label>
+      <div class="modal-actions">
+        <a class="btn btn-ghost btn-sm" id="mReply" href="#">Reply by email</a>
+        <a class="btn btn-ghost btn-sm" id="mCall" href="#">Call</a>
+        <span class="spacer"></span>
+        <button class="btn btn-danger btn-sm" id="mDelete" type="button">Delete</button>
+        <button class="btn btn-primary btn-sm" id="mSave" type="button">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="../js/admin/dashboard.js"></script>
+</body>
+</html>
